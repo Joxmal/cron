@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE "monedas" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "bcv_EUR" DECIMAL NOT NULL,
+    "bcv_USD" DECIMAL NOT NULL,
+    "bcv_CNY" DECIMAL NOT NULL,
+    "bcv_TRY" DECIMAL NOT NULL,
+    "bcv_RUB" DECIMAL NOT NULL
+);
