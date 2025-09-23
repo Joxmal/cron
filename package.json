@@ -7,6 +7,7 @@
   "license": "UNLICENSED",
   "packageManager": "pnpm@10.11.0",
   "scripts": {
+    "start:prod:pm2": "pm2 start npm --name cronMonedas -- run start:prod",
     "postinstall": "prisma generate",
     "generate": "prisma generate",
     "build": "nest build",
