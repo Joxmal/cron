@@ -14,6 +14,8 @@ export interface BcvRates {
   yuan: number | null;
   lira: number | null;
   rublo: number | null;
+  bnc_USD: number | null;
+  bnc_USD_EUR: number | null;
   fecha: Date;
 }
 
@@ -83,6 +85,8 @@ export class WebScrapingService {
         yuan: null,
         lira: null,
         rublo: null,
+        bnc_USD: null,
+        bnc_USD_EUR: null,
         fecha: new Date(), // Se actualizará con la fecha extraída
       };
 
@@ -193,6 +197,9 @@ export class WebScrapingService {
           yuan: record.bcv_CNY !== null ? record.bcv_CNY.toNumber() : null,
           lira: record.bcv_TRY !== null ? record.bcv_TRY.toNumber() : null,
           rublo: record.bcv_RUB !== null ? record.bcv_RUB.toNumber() : null,
+          bnc_USD: record.bnc_USD !== null ? record.bnc_USD.toNumber() : null,
+          bnc_USD_EUR:
+            record.bnc_USD_EUR !== null ? record.bnc_USD_EUR.toNumber() : null,
           fecha: record.fecha,
         };
       } else {
